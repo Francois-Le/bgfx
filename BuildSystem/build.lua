@@ -15,6 +15,7 @@ function bgfx_project()
         exceptionhandling "Off"
         rtti "Off"
         defines "__STDC_FORMAT_MACROS"
+        defines "BX_CONFIG_DEBUG=1"
         files
         {
             path.join(baseFolder, "include/bgfx/**.h"),
