@@ -15,7 +15,6 @@ function bgfx_project()
         exceptionhandling "Off"
         rtti "Off"
         defines "__STDC_FORMAT_MACROS"
-        defines "BX_CONFIG_DEBUG=1"
         files
         {
             path.join(baseFolder, "include/bgfx/**.h"),
@@ -31,6 +30,7 @@ function bgfx_project()
             path.join(baseFolder, "include"),
             path.join(baseFolder, "3rdparty"),
             path.join(baseFolder, "3rdparty/dxsdk/include"),
+            path.join(baseFolder, "3rdparty/directx-headers/include/directx"),
             path.join(baseFolder, "3rdparty/khronos")
         }
         bimg_include()
