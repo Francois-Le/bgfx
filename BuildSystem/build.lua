@@ -3,7 +3,8 @@ function bgfx_include()
     includedirs { path.join(baseFolder, "include") }
 end
 
-function bgfx_project()
+function bgfx_project(options)
+    options = options or {}
     local baseFolder = debug.getinfo(1,'S').source:match("^@(.+)/buildSystem/build.lua$")
 
     project "bgfx"
@@ -50,4 +51,8 @@ function bgfx_project()
             {
                 path.join(baseFolder, "src/*.mm"),
             }
+
+        if options.dependson then
+            dependson { options.dependson }
+        end
 end
